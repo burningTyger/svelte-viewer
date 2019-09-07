@@ -1,0 +1,37 @@
+{
+  "name": "svelte-viewer",
+  "version": "1.0.0",
+  "main": "build/main.js",
+  "private": true,
+  "scripts": {
+    "build": "rollup --config",
+    "start": "npm run build && run-s start:*",
+    "dev": "rollup -c && run-p dev:*",
+    "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=icons/icon.ico --asar --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"electron-svelte-template\"",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 asar --out=release",
+    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=icons/icon.png asar --out=release",
+    "start:electron": "electron .",
+    "dev:development": "rollup --config --watch",
+    "dev:electron": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^6.0.7",
+    "electron-packager": "^14.0.5",
+    "npm-run-all": "^4.1.5",
+    "rollup-plugin-node-externals": "^2.0.0"
+  },
+  "dependencies": {
+    "bulma": "^0.7.5",
+    "cheap-watch": "^1.0.2",
+    "comlink": "^4.0.2",
+    "electron-util": "^0.12.1",
+    "mark.js": "^8.11.1",
+    "rollup": "^1.20.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^5.1.0",
+    "serialize-error": "^4.1.0",
+    "svelte": "^3.8.1"
+  }
+}

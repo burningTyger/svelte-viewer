@@ -1,0 +1,8 @@
+node_modules/
+release/
+package-lock.jsonbuild
+build/bundle.*
+build/*.js
+build/*.map
+.DS_Store
+.vscode

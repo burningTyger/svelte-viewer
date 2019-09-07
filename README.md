@@ -1,0 +1,1 @@
+This is a side project of schild.report. Basically the same without all the school related stuff. You can use it to open and view svelte files. They are compiled when opened and will recompile when changed.
